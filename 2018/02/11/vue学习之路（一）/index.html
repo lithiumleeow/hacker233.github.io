@@ -3,39 +3,37 @@
 <head>
   <meta charset="utf-8">
   
-  <title>十分钟GitHub pages搭建个人博客小白教程 | 小全技术博</title>
+  <title>vue学习之路（一）利用vue-cli构建vue项目 | 小全技术博</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="GitHub作为全球最大的程序员交友网站，是一个代码托管平台和开发者社区，开发者可以在Github上创建自己的开源项目并与其他开发者协作编码。最近想在GitHub上搭建一个自己的博客，可是搜寻了网上的好多教程都不成功。有的教程偏老，有的教程不适合小白过于复杂。没办法，自己刚入门，捣鼓了半天，总算摸出了一条适合小白搭建博客的方法，下面进入正题：（注意：此方法适合小白）">
-<meta name="keywords" content="小白 教程 个人博客 GitHub">
+  <meta name="description" content="利用vue-cli来开发vue项目第一步">
+<meta name="keywords" content="vue vue-cli 教程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="十分钟GitHub pages搭建个人博客小白教程">
-<meta property="og:url" content="http://luhongquan.cn/2018/02/10/5分钟搭建个人博客小白教程/index.html">
+<meta property="og:title" content="vue学习之路（一）利用vue-cli构建vue项目">
+<meta property="og:url" content="http://luhongquan.cn/2018/02/11/vue学习之路（一）/index.html">
 <meta property="og:site_name" content="小全技术博">
-<meta property="og:description" content="GitHub作为全球最大的程序员交友网站，是一个代码托管平台和开发者社区，开发者可以在Github上创建自己的开源项目并与其他开发者协作编码。最近想在GitHub上搭建一个自己的博客，可是搜寻了网上的好多教程都不成功。有的教程偏老，有的教程不适合小白过于复杂。没办法，自己刚入门，捣鼓了半天，总算摸出了一条适合小白搭建博客的方法，下面进入正题：（注意：此方法适合小白）">
+<meta property="og:description" content="利用vue-cli来开发vue项目第一步">
 <meta property="og:locale" content="ch">
-<meta property="og:image" content="https://pic3.zhimg.com/v2-be8a3a6ad036c32b51caa3d78af4f146_r.jpg">
-<meta property="og:image" content="https://pic3.zhimg.com/v2-37aac3db6e2094f0e2da6fb41196d6d6_r.jpg">
-<meta property="og:image" content="https://pic1.zhimg.com/v2-7872012db459db8c8bab2793f7f79101_r.jpg">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-2a7467c3106c2737.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-db513bf61ed062a5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-1554da4f3d92ffda.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://pic3.zhimg.com/v2-ae40c07cde4cfe27b93c902850160891_r.jpg">
-<meta property="og:image" content="https://pic1.zhimg.com/v2-3d639cfbaff027254b6e899a1642644b_r.jpg">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-a96347b4c514822b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://pic1.zhimg.com/v2-be796f462202406cb2cd42fd511d6a85_r.jpg">
-<meta property="og:image" content="https://pic3.zhimg.com/v2-c5f165c7056bf8a1e81c98880e6bc3b7_r.jpg">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-fa7a1266b138c7ea.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://pic4.zhimg.com/v2-c73a4bec66a84957dd8b069b43f177d1_r.jpg">
-<meta property="og:image" content="https://pic3.zhimg.com/v2-9e80d042f9b5c2cd0f4326890cdaa331_r.jpg">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-158f3effbc09c4a6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-7f384aa06c7dbde5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-3914c602ea82cef6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://pic1.zhimg.com/v2-00a8904053bb937ecf5498a1db241ae3_r.jpg">
-<meta property="og:updated_time" content="2018-02-10T13:23:56.103Z">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-e1fa3df0e7e7e5f4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-e5e95a284d93b8ee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-6d4f2346d9b986f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-1cfee1f76fb4dd9d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-ab068076ca741cc3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-c5702150ccc86b88.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-f6e4697d1e6b4bfb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-a102ee14c3afe971.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-3508787556f930e1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-7bd176f2df72a607.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-344ca43cb51ca888.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-3f4fefe9e406c8c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-84c5b58425f30285.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-6a986277579a4267.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-12f010f0ee66211b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-417214db88f87645.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-02-11T06:41:31.528Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="十分钟GitHub pages搭建个人博客小白教程">
-<meta name="twitter:description" content="GitHub作为全球最大的程序员交友网站，是一个代码托管平台和开发者社区，开发者可以在Github上创建自己的开源项目并与其他开发者协作编码。最近想在GitHub上搭建一个自己的博客，可是搜寻了网上的好多教程都不成功。有的教程偏老，有的教程不适合小白过于复杂。没办法，自己刚入门，捣鼓了半天，总算摸出了一条适合小白搭建博客的方法，下面进入正题：（注意：此方法适合小白）">
-<meta name="twitter:image" content="https://pic3.zhimg.com/v2-be8a3a6ad036c32b51caa3d78af4f146_r.jpg">
+<meta name="twitter:title" content="vue学习之路（一）利用vue-cli构建vue项目">
+<meta name="twitter:description" content="利用vue-cli来开发vue项目第一步">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/6055967-e1fa3df0e7e7e5f4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="小全技术博" type="application/atom+xml">
   
@@ -245,11 +243,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-5分钟搭建个人博客小白教程" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-vue学习之路（一）" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/02/10/5分钟搭建个人博客小白教程/" class="article-date">
-      <time datetime="2018-02-10T12:53:30.000Z" itemprop="datePublished">2018-02-10</time>
+      <a href="/2018/02/11/vue学习之路（一）/" class="article-date">
+      <time datetime="2018-02-11T06:38:43.086Z" itemprop="datePublished">2018-02-11</time>
 </a>
     </div>
   
@@ -262,7 +260,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      十分钟GitHub pages搭建个人博客小白教程
+      vue学习之路（一）利用vue-cli构建vue项目
     </h1>
   
 
@@ -273,7 +271,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小白-教程-个人博客-GitHub/">小白 教程 个人博客 GitHub</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue-vue-cli-教程/">vue vue-cli 教程</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -283,45 +281,14 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>GitHub作为全球最大的程序员交友网站，是一个代码托管平台和开发者社区，开发者可以在Github上创建自己的开源项目并与其他开发者协作编码。<br>最近想在GitHub上搭建一个自己的博客，可是搜寻了网上的好多教程都不成功。有的教程偏老，有的教程不适合小白过于复杂。没办法，自己刚入门，捣鼓了半天，总算摸出了一条适合小白搭建博客的方法，下面进入正题：（注意：此方法适合小白）<br><a id="more"></a><br>1.首先，不用多说，得先有一个GitHub账号吧：<br><img src="https://pic3.zhimg.com/v2-be8a3a6ad036c32b51caa3d78af4f146_r.jpg" alt="注册"></p>
-<p>填好自己得个人信息（用户名好像不能用汉字）：<br><img src="https://pic3.zhimg.com/v2-37aac3db6e2094f0e2da6fb41196d6d6_r.jpg" alt="填写信息"></p>
-<p>然后点击Create an account.<br><img src="https://pic1.zhimg.com/v2-7872012db459db8c8bab2793f7f79101_r.jpg" alt="创建"></p>
-<p>这里选择免费的啦，然后Continue<br><img src="http://upload-images.jianshu.io/upload_images/6055967-2a7467c3106c2737.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>这里选择自己的一些基本情况，然后submit。<br><img src="http://upload-images.jianshu.io/upload_images/6055967-db513bf61ed062a5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>最后来到这个界面就对了，点击右上角那个加号旁边那里，可以来到这个页面。</p>
-<p>2.开始搭建博客：</p>
-<p>以前GitHub上的项目之类的都是一大堆源代码，对于一个新手来说，看到一大堆源码，只会让人头晕脑涨，不知何处入手。他希望看到的是，一个简明易懂的网页，说明每一步应该怎么做。因此，github就设计了Pages功能，允许用户自定义项目首页，用来替代默认的源码列表。所以，github Pages可以被认为是用户编写的、托管在github上的静态网页。</p>
-<p>首先，我们需要新建一个Repositories,Repositories就相当于一个库，存放我们的项目文件。<br><img src="http://upload-images.jianshu.io/upload_images/6055967-1554da4f3d92ffda.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>然后给自己的Repositories取一个名字，注意：名称格式最好为：用户名.github.io</p>
-<p>因为我搭建过，所以会提示错误。<br><img src="https://pic3.zhimg.com/v2-ae40c07cde4cfe27b93c902850160891_r.jpg" alt="创建"></p>
-<p>然后点击create repositories.</p>
-<p>随后跳转到该库界面,由于我是搭建好的，所以会有项目文件，然后选择Settings</p>
-<p><img src="https://pic1.zhimg.com/v2-3d639cfbaff027254b6e899a1642644b_r.jpg" alt="此处输入图片的描述"></p>
-<p>进入settings后，往下拉，找到GitHub pages设置界面<br><img src="http://upload-images.jianshu.io/upload_images/6055967-a96347b4c514822b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>按如图所示选择，注意，选择source之后记得Save，然后点击Choose a theme选择一个博客主题。<br><img src="https://pic1.zhimg.com/v2-be796f462202406cb2cd42fd511d6a85_r.jpg" alt="选主题"></p>
-<p>然后点击Select theme</p>
-<p>到这一步呢，正常来说你就可以看到自己的博客了。在地址栏输入：用户名.<a href="http://github.io你就可以访问页面了。" target="_blank" rel="noopener">http://github.io你就可以访问页面了。</a></p>
-<p>3.接下来，就该去下载GitHub桌面版了，为什么使用桌面版呢，因为简单，适合小白，没那么多命令行。官网下载可能有一些慢，这里是我下好的：链接：<a href="http://pan.baidu.com/s/1bpkzaKB" target="_blank" rel="noopener">百度网盘</a> 密码：<code>mwgm</code>。</p>
-<p>下载下来后，打开用自己的用户名登录。然后选择File下的Clone repositories.<br><img src="https://pic3.zhimg.com/v2-c5f165c7056bf8a1e81c98880e6bc3b7_r.jpg" alt="桌面版"></p>
-<p>然后将你刚刚建好的repositories的url复制过来，点击Clone。一般存放的默认文件夹为</p>
-<p>C:\Users\计算机名\Documents\GitHub。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6055967-fa7a1266b138c7ea.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>clone完之后你会发现C:\Users\计算机名\Documents\GitHub路径下多了一个文件夹，如图：<br><img src="https://pic4.zhimg.com/v2-c73a4bec66a84957dd8b069b43f177d1_r.jpg" alt="clone"></p>
-<p>然后将该文件夹里的文件都删掉，如果有.git文件，需要保留.git文件</p>
-<p><img src="https://pic3.zhimg.com/v2-9e80d042f9b5c2cd0f4326890cdaa331_r.jpg" alt="文件夹"></p>
-<p>接下来可以去找一个博客模板，如果自己喜欢折腾，也可以自己写。推荐一个模板地址：</p>
-<p><a href="https://html5up.net/" target="_blank" rel="noopener">网站模板</a></p>
-<p>模板下载下来之后，将所有文件都复制到本地的那个库文件夹中，如图：<br><img src="http://upload-images.jianshu.io/upload_images/6055967-158f3effbc09c4a6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>4.接下来改同步到网络上了，打开GitHub桌面版。你会发现有非常多的changes，如图</p>
-<p>在summary中随意填一些内容，然后带年纪commit to master。<br><img src="http://upload-images.jianshu.io/upload_images/6055967-7f384aa06c7dbde5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>然后，同步，点击如图所示区域。</p>
-<p>注意：可能由于墙或者什么网络问题，上传有可能会失败或较久，需要多试几次。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6055967-3914c602ea82cef6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>然后回到GitHub网站上，你会发现该库文件下多了很多文件<br><img src="https://pic1.zhimg.com/v2-00a8904053bb937ecf5498a1db241ae3_r.jpg" alt="GitHub"></p>
-<p>到这里也就差不多了，可以输入地址访问自己的博客了，剩下的就该自己优化博客了。</p>
-<p>说明，博客首页为index.htm文件，也是默认起始页面。</p>
-<p>到这里就结束了，是不是很简单呢，没有涉及到命令行和其他知识，虽然此教程不是最好的，但是对于小白来说，还是一块敲门砖的，剩下的就该自己钻研了。</p>
-<p>附上我的博客：<a href="https://luhongquan.cn/">小全技术博</a></p>
+        <p>利用vue-cli来开发vue项目第一步<br><a id="more"></a><br><strong>vue是什么</strong>：（官方解释）Vue (读音 /vjuː/，类似于 <strong>view</strong>) 是一套用于构建用户界面的<strong>渐进式框架</strong>。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与<a href="https://cn.vuejs.org/v2/guide/single-file-components.html" target="_blank" rel="noopener">现代化的工具链</a>以及各种<a href="https://github.com/vuejs/awesome-vue#libraries--plugins" target="_blank" rel="noopener">支持类库</a>结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。</p>
+<p>其实就是一个前端框架。</p>
+<p><strong>vue-cli是什么</strong>：<code>vue-cli</code>是<a href="https://vuejs.org/" target="_blank" rel="noopener">Vue</a>的脚手架工具,打个比方，就好比就要修建房子，首先要做的就是将房子的整体结构先修好，然后在往里面填东西。<code>vue-cli</code>就提供了这样一个功能，将<a href="http://webpack.github.io/" target="_blank" rel="noopener">webpack</a>等打包程序集为一体，让我们开发vue项目更加方便快捷。</p>
+<p><em>本教程以window版本安装为例，其他系统大同小异</em>。</p>
+<p><strong>一</strong>.<br>要使用<code>vue-cli</code>，首先得安装<code>node.js</code>,我相信学习前端的小伙伴多半电脑上都安装了<code>node.js</code>，这里我们也只使用<code>node.js</code>的<code>npm</code>包管理功能。若没有安装，则到<a href="https://nodejs.org/en/" target="_blank" rel="noopener">node.js官网</a>下载安装即可，安装步骤和安装QQ没什么区别。检查安装成功与否：<code>win+R</code>键输入<code>cmd</code>弹出命令行窗口，在命令行窗口输入<code>node -v</code>，若显示node的版本号则安装成功。因为现在npm管理工具已经和<code>node.js</code>集成了，所用不用再单独下载了。<br><img src="http://upload-images.jianshu.io/upload_images/6055967-e1fa3df0e7e7e5f4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><strong>二</strong>.<br>接下来就是使用<code>vue-cli</code>了。<br>要使用<code>Vue-cli</code>，首先就得安装<code>vue-cli</code>。就在刚刚的那个命令行窗口输入<code>npm install -g vue-cli</code>，<code>-g</code>的意思是全局安装。由于网络限制原因，安装过程可能有些缓慢，在意的同学可百度<a href="http://npm.taobao.org/" target="_blank" rel="noopener">npm淘宝镜像</a>不在意的同学不用管。<br>安装结果：<br><img src="http://upload-images.jianshu.io/upload_images/6055967-e5e95a284d93b8ee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>图片和大家可能不一样，因为我之前安装过<code>vue-cli</code><br>安装成功之后，可以执行<code>vue list</code> 命令查看：<br><img src="http://upload-images.jianshu.io/upload_images/6055967-6d4f2346d9b986f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>也是可以使用<code>vue  -V</code>查看，注意是大写的<code>V</code><br><img src="http://upload-images.jianshu.io/upload_images/6055967-1cfee1f76fb4dd9d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>若如图显示，则恭喜安装成功。</p>
+<p><strong>三</strong>.<br>接下来在电脑的任意位置建立一个文件夹，这里我取名为<code>test</code>。打开<code>test</code>文件夹：<br><img src="http://upload-images.jianshu.io/upload_images/6055967-ab068076ca741cc3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>然后在当前文件夹任意位置按住<code>shift</code>键然后鼠标右击，会出现在此处打开命令行工具的选项：<br><img src="http://upload-images.jianshu.io/upload_images/6055967-c5702150ccc86b88.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>点击打开命令行工具，输入<code>vue init webpack</code>对该项目以<code>webpack</code>的打包模板进行初始化。网络原因，这个过程可能要等一会儿。<br><img src="http://upload-images.jianshu.io/upload_images/6055967-f6e4697d1e6b4bfb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>输入Y，继续执行<br><img src="http://upload-images.jianshu.io/upload_images/6055967-a102ee14c3afe971.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>项目名称，项目介绍，以及作者等都可以默认，<code>vue-router</code>是官方提供的路由插件，在这里我选择Y。<br><img src="http://upload-images.jianshu.io/upload_images/6055967-3508787556f930e1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>接下来的几项我都选择<code>N</code>，这里大概是指是否安装规范代码格式检查，由于是测试，这里就不安装了。然后就静静的等待它安装完成：<br><img src="http://upload-images.jianshu.io/upload_images/6055967-7bd176f2df72a607.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>安装完成<br><img src="http://upload-images.jianshu.io/upload_images/6055967-344ca43cb51ca888.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>你也可以输入<code>webpack -v</code>检查安装正确与否<br><img src="http://upload-images.jianshu.io/upload_images/6055967-3f4fefe9e406c8c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>这是在看目录文件夹，项目结构已经出来了<br><img src="http://upload-images.jianshu.io/upload_images/6055967-84c5b58425f30285.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>接下来执行<code>npm install</code>命令，这一步也可以省略，不过为了后面项目的开发，建议安装。<br><img src="http://upload-images.jianshu.io/upload_images/6055967-6a986277579a4267.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>接下来就是见证奇迹的时刻到了，输入命令<code>npm run dev</code>，在本地查看项目。<br><img src="http://upload-images.jianshu.io/upload_images/6055967-12f010f0ee66211b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>然后就在浏览器中输入<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a>，若显示如图所示，则代表你已经安装成功了。<br><img src="http://upload-images.jianshu.io/upload_images/6055967-417214db88f87645.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>到这里基本就结束了，后面我会继续更新vue学习之路（二）</p>
 
       
       
@@ -377,13 +344,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/02/10/5分钟搭建个人博客小白教程/">十分钟GitHub pages搭建个人博客小白教程</a></p>
+        <p><span>本文标题:</span><a href="/2018/02/11/vue学习之路（一）/">vue学习之路（一）利用vue-cli构建vue项目</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 小全 的个人博客">小全</a></p>
-        <p><span>发布时间:</span>2018年02月10日 - 20时53分</p>
-        <p><span>最后更新:</span>2018年02月10日 - 21时23分</p>
+        <p><span>发布时间:</span>2018年02月11日 - 14时38分</p>
+        <p><span>最后更新:</span>2018年02月11日 - 14时41分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/02/10/5分钟搭建个人博客小白教程/" title="十分钟GitHub pages搭建个人博客小白教程">http://luhongquan.cn/2018/02/10/5分钟搭建个人博客小白教程/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://luhongquan.cn/2018/02/10/5分钟搭建个人博客小白教程/　　作者: 小全" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/02/11/vue学习之路（一）/" title="vue学习之路（一）利用vue-cli构建vue项目">http://luhongquan.cn/2018/02/11/vue学习之路（一）/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://luhongquan.cn/2018/02/11/vue学习之路（一）/　　作者: 小全" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -396,15 +363,11 @@
 
 <nav id="article-nav">
   
-    <a href="/2018/02/11/vue学习之路（一）/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          vue学习之路（一）利用vue-cli构建vue项目
-        
-      </div>
-    </a>
   
+    <a href="/2018/02/10/5分钟搭建个人博客小白教程/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">十分钟GitHub pages搭建个人博客小白教程</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -479,13 +442,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/02/11/vue学习之路（一）/" title="上一篇: vue学习之路（一）利用vue-cli构建vue项目">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2018/02/10/5分钟搭建个人博客小白教程/" title="下一篇: 十分钟GitHub pages搭建个人博客小白教程">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
     <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/02/11/vue学习之路（一）/">vue学习之路（一）利用vue-cli构建vue项目</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/10/5分钟搭建个人博客小白教程/">十分钟GitHub pages搭建个人博客小白教程</a></li></ul>
