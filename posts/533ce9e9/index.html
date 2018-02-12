@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>十分钟GitHub pages搭建个人博客小白教程 | 小全技术博</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="GitHub作为全球最大的程序员交友网站，是一个代码托管平台和开发者社区，开发者可以在Github上创建自己的开源项目并与其他开发者协作编码。最近想在GitHub上搭建一个自己的博客，可是搜寻了网上的好多教程都不成功。有的教程偏老，有的教程不适合小白过于复杂。没办法，自己刚入门，捣鼓了半天，总算摸出了一条适合小白搭建博客的方法，下面进入正题：（注意：此方法适合小白）">
+<meta name="keywords" content="个人博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="十分钟GitHub pages搭建个人博客小白教程">
+<meta property="og:url" content="http://luhongquan.cn/posts/533ce9e9/index.html">
+<meta property="og:site_name" content="小全技术博">
+<meta property="og:description" content="GitHub作为全球最大的程序员交友网站，是一个代码托管平台和开发者社区，开发者可以在Github上创建自己的开源项目并与其他开发者协作编码。最近想在GitHub上搭建一个自己的博客，可是搜寻了网上的好多教程都不成功。有的教程偏老，有的教程不适合小白过于复杂。没办法，自己刚入门，捣鼓了半天，总算摸出了一条适合小白搭建博客的方法，下面进入正题：（注意：此方法适合小白）">
+<meta property="og:locale" content="ch">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-be8a3a6ad036c32b51caa3d78af4f146_r.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-37aac3db6e2094f0e2da6fb41196d6d6_r.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-7872012db459db8c8bab2793f7f79101_r.jpg">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-2a7467c3106c2737.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-db513bf61ed062a5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-1554da4f3d92ffda.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-ae40c07cde4cfe27b93c902850160891_r.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-3d639cfbaff027254b6e899a1642644b_r.jpg">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-a96347b4c514822b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-be796f462202406cb2cd42fd511d6a85_r.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-c5f165c7056bf8a1e81c98880e6bc3b7_r.jpg">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-fa7a1266b138c7ea.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-c73a4bec66a84957dd8b069b43f177d1_r.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-9e80d042f9b5c2cd0f4326890cdaa331_r.jpg">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-158f3effbc09c4a6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-7f384aa06c7dbde5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-3914c602ea82cef6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-00a8904053bb937ecf5498a1db241ae3_r.jpg">
+<meta property="og:updated_time" content="2018-02-11T07:02:07.652Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="十分钟GitHub pages搭建个人博客小白教程">
+<meta name="twitter:description" content="GitHub作为全球最大的程序员交友网站，是一个代码托管平台和开发者社区，开发者可以在Github上创建自己的开源项目并与其他开发者协作编码。最近想在GitHub上搭建一个自己的博客，可是搜寻了网上的好多教程都不成功。有的教程偏老，有的教程不适合小白过于复杂。没办法，自己刚入门，捣鼓了半天，总算摸出了一条适合小白搭建博客的方法，下面进入正题：（注意：此方法适合小白）">
+<meta name="twitter:image" content="https://pic3.zhimg.com/v2-be8a3a6ad036c32b51caa3d78af4f146_r.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="小全技术博" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">小全</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">小全博客</p>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="search" placeholder=" Search...">
+            </form>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">博客首页</a></li>
+                        
+                            <li><a href="/works">作品展示</a></li>
+                        
+                            <li><a href="/about">留言打卡</a></li>
+                        
+                            <li><a href="/FrontEndGuide">前端导航</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=wPH1_PT39-Xy_feAsbHuo6_t" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/Hacker233" title="github">github</a>
+                            
+                                <a class="fl zhihu" target="_blank" href="https://www.zhihu.com/people/luhongquan/activities" title="zhihu">zhihu</a>
+                            
+                                <a class="fl weibo" target="_blank" href="https://weibo.com/u/5632954059/home?wvr=5&sudaref=login.sina.com.cn" title="weibo">weibo</a>
+                            
+                                <a class="fl linkedin" target="_blank" href="http://www.linkedin.com/in/%E7%8E%89-%E5%B8%B8-616b17136/" title="linkedin">linkedin</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/个人博客/" style="font-size: 10px;">个人博客</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://Hacker233.github.io/">hacker</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">阅读狂，象棋谜，游山玩水乐此不彼。</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">小全</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">小全</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">小全博客</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">博客首页</a></li>
+                
+                    <li><a href="/works">作品展示</a></li>
+                
+                    <li><a href="/about">留言打卡</a></li>
+                
+                    <li><a href="/FrontEndGuide">前端导航</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=wPH1_PT39-Xy_feAsbHuo6_t" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/Hacker233" title="github">github</a>
+                    
+                        <a class="zhihu" target="_blank" href="https://www.zhihu.com/people/luhongquan/activities" title="zhihu">zhihu</a>
+                    
+                        <a class="weibo" target="_blank" href="https://weibo.com/u/5632954059/home?wvr=5&sudaref=login.sina.com.cn" title="weibo">weibo</a>
+                    
+                        <a class="linkedin" target="_blank" href="http://www.linkedin.com/in/%E7%8E%89-%E5%B8%B8-616b17136/" title="linkedin">linkedin</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-10分钟搭建个人博客小白教程" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/posts/533ce9e9/" class="article-date">
+      <time datetime="2018-02-10T12:53:30.000Z" itemprop="datePublished">2018-02-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      十分钟GitHub pages搭建个人博客小白教程
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/个人博客/">个人博客</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>GitHub作为全球最大的程序员交友网站，是一个代码托管平台和开发者社区，开发者可以在Github上创建自己的开源项目并与其他开发者协作编码。<br>最近想在GitHub上搭建一个自己的博客，可是搜寻了网上的好多教程都不成功。有的教程偏老，有的教程不适合小白过于复杂。没办法，自己刚入门，捣鼓了半天，总算摸出了一条适合小白搭建博客的方法，下面进入正题：（注意：此方法适合小白）<br><a id="more"></a><br>1.首先，不用多说，得先有一个GitHub账号吧：<br><img src="https://pic3.zhimg.com/v2-be8a3a6ad036c32b51caa3d78af4f146_r.jpg" alt="注册"></p>
+<p>填好自己得个人信息（用户名好像不能用汉字）：<br><img src="https://pic3.zhimg.com/v2-37aac3db6e2094f0e2da6fb41196d6d6_r.jpg" alt="填写信息"></p>
+<p>然后点击Create an account.<br><img src="https://pic1.zhimg.com/v2-7872012db459db8c8bab2793f7f79101_r.jpg" alt="创建"></p>
+<p>这里选择免费的啦，然后Continue<br><img src="http://upload-images.jianshu.io/upload_images/6055967-2a7467c3106c2737.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>这里选择自己的一些基本情况，然后submit。<br><img src="http://upload-images.jianshu.io/upload_images/6055967-db513bf61ed062a5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>最后来到这个界面就对了，点击右上角那个加号旁边那里，可以来到这个页面。</p>
+<p>2.开始搭建博客：</p>
+<p>以前GitHub上的项目之类的都是一大堆源代码，对于一个新手来说，看到一大堆源码，只会让人头晕脑涨，不知何处入手。他希望看到的是，一个简明易懂的网页，说明每一步应该怎么做。因此，github就设计了Pages功能，允许用户自定义项目首页，用来替代默认的源码列表。所以，github Pages可以被认为是用户编写的、托管在github上的静态网页。</p>
+<p>首先，我们需要新建一个Repositories,Repositories就相当于一个库，存放我们的项目文件。<br><img src="http://upload-images.jianshu.io/upload_images/6055967-1554da4f3d92ffda.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>然后给自己的Repositories取一个名字，注意：名称格式最好为：用户名.github.io</p>
+<p>因为我搭建过，所以会提示错误。<br><img src="https://pic3.zhimg.com/v2-ae40c07cde4cfe27b93c902850160891_r.jpg" alt="创建"></p>
+<p>然后点击create repositories.</p>
+<p>随后跳转到该库界面,由于我是搭建好的，所以会有项目文件，然后选择Settings</p>
+<p><img src="https://pic1.zhimg.com/v2-3d639cfbaff027254b6e899a1642644b_r.jpg" alt="此处输入图片的描述"></p>
+<p>进入settings后，往下拉，找到GitHub pages设置界面<br><img src="http://upload-images.jianshu.io/upload_images/6055967-a96347b4c514822b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>按如图所示选择，注意，选择source之后记得Save，然后点击Choose a theme选择一个博客主题。<br><img src="https://pic1.zhimg.com/v2-be796f462202406cb2cd42fd511d6a85_r.jpg" alt="选主题"></p>
+<p>然后点击Select theme</p>
+<p>到这一步呢，正常来说你就可以看到自己的博客了。在地址栏输入：用户名.<a href="http://github.io你就可以访问页面了。" target="_blank" rel="noopener">http://github.io你就可以访问页面了。</a></p>
+<p>3.接下来，就该去下载GitHub桌面版了，为什么使用桌面版呢，因为简单，适合小白，没那么多命令行。官网下载可能有一些慢，这里是我下好的：链接：<a href="http://pan.baidu.com/s/1bpkzaKB" target="_blank" rel="noopener">百度网盘</a> 密码：<code>mwgm</code>。</p>
+<p>下载下来后，打开用自己的用户名登录。然后选择File下的Clone repositories.<br><img src="https://pic3.zhimg.com/v2-c5f165c7056bf8a1e81c98880e6bc3b7_r.jpg" alt="桌面版"></p>
+<p>然后将你刚刚建好的repositories的url复制过来，点击Clone。一般存放的默认文件夹为</p>
+<p>C:\Users\计算机名\Documents\GitHub。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6055967-fa7a1266b138c7ea.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>clone完之后你会发现C:\Users\计算机名\Documents\GitHub路径下多了一个文件夹，如图：<br><img src="https://pic4.zhimg.com/v2-c73a4bec66a84957dd8b069b43f177d1_r.jpg" alt="clone"></p>
+<p>然后将该文件夹里的文件都删掉，如果有.git文件，需要保留.git文件</p>
+<p><img src="https://pic3.zhimg.com/v2-9e80d042f9b5c2cd0f4326890cdaa331_r.jpg" alt="文件夹"></p>
+<p>接下来可以去找一个博客模板，如果自己喜欢折腾，也可以自己写。推荐一个模板地址：</p>
+<p><a href="https://html5up.net/" target="_blank" rel="noopener">网站模板</a></p>
+<p>模板下载下来之后，将所有文件都复制到本地的那个库文件夹中，如图：<br><img src="http://upload-images.jianshu.io/upload_images/6055967-158f3effbc09c4a6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>4.接下来改同步到网络上了，打开GitHub桌面版。你会发现有非常多的changes，如图</p>
+<p>在summary中随意填一些内容，然后带年纪commit to master。<br><img src="http://upload-images.jianshu.io/upload_images/6055967-7f384aa06c7dbde5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>然后，同步，点击如图所示区域。</p>
+<p>注意：可能由于墙或者什么网络问题，上传有可能会失败或较久，需要多试几次。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6055967-3914c602ea82cef6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>然后回到GitHub网站上，你会发现该库文件下多了很多文件<br><img src="https://pic1.zhimg.com/v2-00a8904053bb937ecf5498a1db241ae3_r.jpg" alt="GitHub"></p>
+<p>到这里也就差不多了，可以输入地址访问自己的博客了，剩下的就该自己优化博客了。</p>
+<p>说明，博客首页为index.htm文件，也是默认起始页面。</p>
+<p>到这里就结束了，是不是很简单呢，没有涉及到命令行和其他知识，虽然此教程不是最好的，但是对于小白来说，还是一块敲门砖的，剩下的就该自己钻研了。</p>
+<p>附上我的博客：<a href="https://luhongquan.cn/">小全技术博</a></p>
+
+      
+      
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+            <div class="shang_tit">
+              <p>纯属好玩</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+            </div>
+              <div class="pay_explain">扫码打赏，你说多少就多少</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝" /></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixin.png" alt="微信" /></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/posts/533ce9e9/">十分钟GitHub pages搭建个人博客小白教程</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 小全 的个人博客">小全</a></p>
+        <p><span>发布时间:</span>2018年02月10日 - 20时53分</p>
+        <p><span>最后更新:</span>2018年02月11日 - 15时02分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/posts/533ce9e9/" title="十分钟GitHub pages搭建个人博客小白教程">http://luhongquan.cn/posts/533ce9e9/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://luhongquan.cn/posts/533ce9e9/　　作者: 小全" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/posts/1a9f75b9/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          vue学习之路（一）利用vue-cli构建vue项目
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+        <div id="gitments"></div>
+<script src="/js/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+      id: window.location.pathname,
+      owner: 'hacker233',
+      repo: 'hacker233.github.io',
+      oauth: {
+        client_id: 'afefb1269b4c992c7d43',
+        client_secret: 'fbbe0ad954a9b03dd4182e3fb50bfd61cd0aca88',
+      },
+    })
+    gitment.render('gitments')
+</script>
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/posts/1a9f75b9/" title="上一篇: vue学习之路（一）利用vue-cli构建vue项目">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/posts/1a9f75b9/">vue学习之路（一）利用vue-cli构建vue项目</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/533ce9e9/">十分钟GitHub pages搭建个人博客小白教程</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2018 小全
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >游客到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+    <script type="text/javascript">
+      window.onload = function(){
+        document.getElementById("search").onclick = function(){
+            console.log("search")
+            search();
+        }
+      }
+      function search(){
+        (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+        (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+        e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+        })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+        _st('install','A1Pz-LKMXbrzcFg2FWi6','2.0.0');
+      }
+    </script>
+
+  </div>
+</body>
+</html>
