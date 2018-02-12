@@ -459,25 +459,20 @@
 
 
     
-      <div class="duoshuo" id="comments">
-    <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2018/02/10/10分钟搭建个人博客小白教程/" data-title="十分钟GitHub pages搭建个人博客小白教程" data-url="http://luhongquan.cn/2018/02/10/10分钟搭建个人博客小白教程/"></div>
-    <!-- 多说评论框 end -->
-    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-    <script type="text/javascript">
-    var duoshuoQuery = {short_name:"Hacker233"};
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = '/js/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] 
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-    </script>
-    <!-- 多说公共JS代码 end -->
-</div>
-
+        <div id="gitments"></div>
+<script src="/js/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+      id: window.location.pathname,
+      owner: 'hacker233',
+      repo: 'hacker233.github.io',
+      oauth: {
+        client_id: '',
+        client_secret: '',
+      },
+    })
+    gitment.render('gitments')
+</script>
     
 
 
