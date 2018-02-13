@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>零基础Hexo+GitHub搭建个人静态博客 | 小全技术博</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="零基础Hexo+Github搭建静态个人博客前言：相信很多人都有写博客的习惯，但是肯定有一部分人和我一样，想拥有一个自己的独立博客。这样不用受个大平台的约束，拥有属于自己风格的独特样式博客。但是对于小白来说，搭建属于自己的独立博客似乎是很难的，往往信心满满的开始动手时，遇到一些自己不懂的专业知识便被吓退了回去。这篇文章从小白的角度出发，让小白也能一步一步将属于自己的独立博客搭建起来，期间也许会遇到">
+<meta name="keywords" content="个人博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="零基础Hexo+GitHub搭建个人静态博客">
+<meta property="og:url" content="http://luhongquan.cn/posts/4f5b69ce/index.html">
+<meta property="og:site_name" content="小全技术博">
+<meta property="og:description" content="零基础Hexo+Github搭建静态个人博客前言：相信很多人都有写博客的习惯，但是肯定有一部分人和我一样，想拥有一个自己的独立博客。这样不用受个大平台的约束，拥有属于自己风格的独特样式博客。但是对于小白来说，搭建属于自己的独立博客似乎是很难的，往往信心满满的开始动手时，遇到一些自己不懂的专业知识便被吓退了回去。这篇文章从小白的角度出发，让小白也能一步一步将属于自己的独立博客搭建起来，期间也许会遇到">
+<meta property="og:locale" content="ch">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-2b9a75b3f4c3c5e9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-c09b5a353a6628ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-0dca09da24681c9b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-a9b75975c950cca0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-96dd92fb9eccdee2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-d378bdd049f5ddd2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-adc34167552d63b5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-7ef50f86fd1504d9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-9f8e240495094f6e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-c2c9f7f0c3973968.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-a1d262db46c335b5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-3c044b928481be52.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-4a1b45dded45c92a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-a9e0cb6ed02879c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-393a002161350667.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-3c632fce3e903b56.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-e4f57fb7449f7d6f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-3c120bc68c3dcc1e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-6eebcb6a5141a522.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-e5370df7f3ae44bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-46fe13e7eb081130.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-eeb14a175b9300be.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-f8f79d595032224c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-9eb55d58afe563b8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-02-13T06:22:56.314Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="零基础Hexo+GitHub搭建个人静态博客">
+<meta name="twitter:description" content="零基础Hexo+Github搭建静态个人博客前言：相信很多人都有写博客的习惯，但是肯定有一部分人和我一样，想拥有一个自己的独立博客。这样不用受个大平台的约束，拥有属于自己风格的独特样式博客。但是对于小白来说，搭建属于自己的独立博客似乎是很难的，往往信心满满的开始动手时，遇到一些自己不懂的专业知识便被吓退了回去。这篇文章从小白的角度出发，让小白也能一步一步将属于自己的独立博客搭建起来，期间也许会遇到">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/6055967-2b9a75b3f4c3c5e9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+  
+    <link rel="alternative" href="/atom.xml" title="小全技术博" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">小全</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">小全博客</p>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="search" placeholder=" Search...">
+            </form>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">博客首页</a></li>
+                        
+                            <li><a href="/works">作品展示</a></li>
+                        
+                            <li><a href="/about">留言打卡</a></li>
+                        
+                            <li><a href="/FrontEndGuide">前端导航</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=wPH1_PT39-Xy_feAsbHuo6_t" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/Hacker233" title="github">github</a>
+                            
+                                <a class="fl zhihu" target="_blank" href="https://www.zhihu.com/people/luhongquan/activities" title="zhihu">zhihu</a>
+                            
+                                <a class="fl weibo" target="_blank" href="https://weibo.com/u/5632954059/home?wvr=5&sudaref=login.sina.com.cn" title="weibo">weibo</a>
+                            
+                                <a class="fl linkedin" target="_blank" href="http://www.linkedin.com/in/%E7%8E%89-%E5%B8%B8-616b17136/" title="linkedin">linkedin</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/个人博客/" style="font-size: 20px;">个人博客</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://Hacker233.github.io/">hacker</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">阅读狂，象棋谜，游山玩水乐此不彼。</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">小全</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">小全</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">小全博客</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">博客首页</a></li>
+                
+                    <li><a href="/works">作品展示</a></li>
+                
+                    <li><a href="/about">留言打卡</a></li>
+                
+                    <li><a href="/FrontEndGuide">前端导航</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=wPH1_PT39-Xy_feAsbHuo6_t" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/Hacker233" title="github">github</a>
+                    
+                        <a class="zhihu" target="_blank" href="https://www.zhihu.com/people/luhongquan/activities" title="zhihu">zhihu</a>
+                    
+                        <a class="weibo" target="_blank" href="https://weibo.com/u/5632954059/home?wvr=5&sudaref=login.sina.com.cn" title="weibo">weibo</a>
+                    
+                        <a class="linkedin" target="_blank" href="http://www.linkedin.com/in/%E7%8E%89-%E5%B8%B8-616b17136/" title="linkedin">linkedin</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-零基础Hexo+Github搭建静态个人博客" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/posts/4f5b69ce/" class="article-date">
+      <time datetime="2018-02-13T06:04:49.000Z" itemprop="datePublished">2018-02-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      零基础Hexo+GitHub搭建个人静态博客
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/个人博客/">个人博客</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="零基础Hexo-Github搭建静态个人博客"><a href="#零基础Hexo-Github搭建静态个人博客" class="headerlink" title="零基础Hexo+Github搭建静态个人博客"></a>零基础Hexo+Github搭建静态个人博客</h1><p>前言：相信很多人都有写博客的习惯，但是肯定有一部分人和我一样，想拥有一个自己的独立博客。这样不用受个大平台的约束，拥有属于自己风格的独特样式博客。但是对于小白来说，搭建属于自己的独立博客似乎是很难的，往往信心满满的开始动手时，遇到一些自己不懂的专业知识便被吓退了回去。这篇文章从小白的角度出发，让小白也能一步一步将属于自己的独立博客搭建起来，期间也许会遇到问题，但是只要有一个学习的心，这些问题都不再是问题。<a id="more"></a>下面开始进入主题：</p>
+<p>搭建过程大概需要这么几个步骤：</p>
+<p>​    1.搭建环境的准备工作（主要是node.js和git环境，以及GitHub账户的设置）</p>
+<p>​    2.安装并初始化Hexo</p>
+<p>​    3.将Hexo和GitHub Page联系起来</p>
+<p>​    4.如何发布新文章</p>
+<p>​    5.如何解析域名到自己的博客</p>
+<p>​    6.Hexo插件的添加</p>
+<h3 id="搭建环境的准备工作"><a href="#搭建环境的准备工作" class="headerlink" title="搭建环境的准备工作"></a>搭建环境的准备工作</h3><p>主要以下三步：</p>
+<p>(1) node.js安装</p>
+<p>(2) git安装</p>
+<p>(3)GitHub账户设置</p>
+<h4 id="1-node-js安装"><a href="#1-node-js安装" class="headerlink" title="1.node.js安装"></a>1.node.js安装</h4><p>  有些小伙伴可能听到<code>node.js</code>就有点惧怕了，不过在这里不用担心，在这里我们只是用到了<code>node.js</code>的<a href="https://www.npmjs.com/" target="_blank" rel="noopener">npm</a>包管理工具，在新版的node.js中，已经将<a href="https://www.npmjs.com/" target="_blank" rel="noopener">npm</a>集成了，所以不必在单独安装<a href="https://www.npmjs.com/" target="_blank" rel="noopener">npm</a>了。不了解npm的小伙伴可以百度查阅一下.</p>
+<p>  node.js下载地址：<a href="https://nodejs.org/en/" target="_blank" rel="noopener">node.js</a></p>
+<p>  node.js的安装过程就和安装QQ一样简单，一直点击下一步就行了。</p>
+<p>  检查node.js是否安装成功：<code>win+R</code>键，然后输入<code>cmd</code>弹出命令框，在命令行内输入node -v,若出现node的版本号则安装成功，可以进行下一步了。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6055967-2b9a75b3f4c3c5e9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Z2T7A{D}%{_1}VQX_}~KDD"></p>
+<h4 id="2-安装git"><a href="#2-安装git" class="headerlink" title="2.安装git"></a>2.安装git</h4><p>Git是现在世界上最先进的分布式版本控制系统，在这里就不多介绍了，感兴趣的小伙伴可以到</p>
+<p><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰</a>博客学习，他的教程很棒。</p>
+<p>git下载地址：[Git](<a href="https://git-scm.com/）" target="_blank" rel="noopener">https://git-scm.com/）</a></p>
+<p>git的安装也和QQ一样简单，一路下一步就行了。</p>
+<p>检查git是否安装成功：在你的电脑随意位置右击，选中<code>Git bash</code> ,弹出<code>git</code>命令框，在命令行中输入<code>git  --version</code>，若弹出版本号则表示你已经安装成功，你可以进入下一步了。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6055967-c09b5a353a6628ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6055967-0dca09da24681c9b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<h4 id="3-github账户设置"><a href="#3-github账户设置" class="headerlink" title="3.github账户设置"></a>3.github账户设置</h4><p>首页到<a href="https://github.com/join?source=login" target="_blank" rel="noopener">GitHub</a>注册一个账号：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6055967-a9b75975c950cca0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="}BMM}N$G%X3ZQY9KUXW{ASM"></p>
+<p>注册好后会到回到这样一个界面，如果不一样你试着到处按一下，总会找到的：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6055967-96dd92fb9eccdee2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="D`J%Q@8HR8DEG$TQDCBOEE"></p>
+<p>然后选择New respository，这个相当于新建了一个仓库，用来存放你的代码之类的：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6055967-d378bdd049f5ddd2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/6055967-d378bdd049f5ddd2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>记住：你取的名字一定要和你的用户名一样，格式就像这样：<code>[用户名].github.io</code>,然后点击<code>create respository</code>,接下来你就可以查看自己的仓库了:</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6055967-adc34167552d63b5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>然后点击settings，记住是当前仓库的settings，不是头像那里的settings，进入设置后下拉找到GitHub page，接下来就是开启GitHub-page功能：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6055967-7ef50f86fd1504d9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>点击choose a theme，进入选择一个主题，然后点击select theme</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6055967-9f8e240495094f6e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>这里我因为创建过了，所以界面有可能会不一样，第一次时界面可能会是这样的，点击Automatic page generator就行了，GitHub会给你创建一个page界面：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6055967-c2c9f7f0c3973968.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>上面步骤都做完后，你就可以在线预览[用户名].github.io这个网址了，若能够正常访问，则代表你这一步已经结束了，可以进入下一步了。</p>
+<p><strong>题外话：</strong>走到这一步是不是感觉很简单呢，心里是不是有点小兴奋，那么继续跟着步骤来，你的博客马上就要建好了。</p>
+<h4 id="4-安装Hexo"><a href="#4-安装Hexo" class="headerlink" title="4.安装Hexo"></a>4.安装Hexo</h4><p><em>hexo是什么：</em>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="noopener">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。这是官方的解释，也很简单明了，总之就是一个博客框架。</p>
+<p><strong>第一步</strong>：在你喜欢的地方建一个空文件夹：在这里就取名为：Hacker233.github.io</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6055967-a1d262db46c335b5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><strong>第二步</strong>：进入文件夹，在空白地方按住shift键，然后鼠标右键，会出现在此处打开命令行工具的选项：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6055967-3c044b928481be52.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><strong>第三步</strong>：然后在命令行中输入：<code>npm install hexo-cli -g</code>因为npm用的是国外的服务器，有可能会下载很慢，相速度快的同学可以百度搜索<a href="https://npm.taobao.org/" target="_blank" rel="noopener">淘宝镜像</a>，一样的道理。接下来就静静的等待安装完成：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6055967-4a1b45dded45c92a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>到这步代表成功了，看到warn也不用担心，然后继续输入：<code>npm install hexo --save</code>，然后静静的等待安装完成。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6055967-a9e0cb6ed02879c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>到这一步也就安装完成了，接下来我们检查检查是否安装成功了，继续输入：<code>hexo -v</code>，若出现如下界面则表示安装成功：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6055967-393a002161350667.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h4 id="5-hexo的一些配置"><a href="#5-hexo的一些配置" class="headerlink" title="5.hexo的一些配置"></a><code>5</code>.hexo的一些配置</h4><p>如果对<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">hexo</a>不熟悉，强烈建议看一看<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方文档</a>，不用太长时间就能学会的。</p>
+<p>在建立的文件夹下打开命令行，然后输入：<code>hexo init</code>，然后静静的等待初始化完成：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6055967-3c632fce3e903b56.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>出现start blogging with hexo 字样则代表你安装成功了。</p>
+<p>这时你回发现你的文件夹目录下会出现许多文件：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6055967-e4f57fb7449f7d6f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>接下来继续在命令行中输入：<code>npm install</code> ，npm会自动给你安装需要的插件。：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6055967-3c120bc68c3dcc1e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><strong>接下来就是初次体验的时候了</strong></p>
+<p>在命令行继续输入：<code>hexo g</code>(如果对hexo的命令不太熟悉，可以去官方文档查看)：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6055967-6eebcb6a5141a522.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>然后继续输入：<code>hexo s</code>(本地查看)</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6055967-e5370df7f3ae44bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>在浏览器输入：<a href="http://localhost:4000/就可以本地查看了" target="_blank" rel="noopener">http://localhost:4000/就可以本地查看了</a></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6055967-46fe13e7eb081130.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h4 id="6-接下来就是将hexo与GitHub-pages联系起来了"><a href="#6-接下来就是将hexo与GitHub-pages联系起来了" class="headerlink" title="6.接下来就是将hexo与GitHub pages联系起来了"></a>6.接下来就是将hexo与GitHub pages联系起来了</h4><p><strong>第一步：</strong>将本地git项目与远程的GitHub建立联系，这时候我们就要配置SSH keys(不明白也没关系，按照步走就行)</p>
+<p>首先检查你电脑上的ssh密钥，在电脑任意位置右击，打开<code>git bash</code>,在命令行中输入：<code>cd ~/.ssh（检查本机密钥）</code>如果提示：No such file or directory 说明你是第一次使用git。</p>
+<p>如果是第一次使用，则在命令行中输入：<code>ssh-keygen -t rsa -C &quot;邮件地址@youremail.com&quot;</code><br>【注】：邮箱地址输入你自己的邮箱地址，其次<code>C</code>是大写。</p>
+<p>然后系统会让你输入密码，这个密码用来提交项目的。由于这里我已经使用过了，所以没法演示了，跟着命令行的提示往下输入就行。</p>
+<p>【注】输入密码可能会没有*的字样，显示为空白，不用担心，继续输入就行。</p>
+<p>最后你会看到<code>the key</code>…之类的，说明配置成功。</p>
+<p><strong>第二步：</strong>将SSH key 添加到GitHub</p>
+<p>打开本地C:\Users\用户名，你会找到.ssh文件夹，如果没找到你就可以试试其他文件夹，理论上默认此文件夹：文件夹里面你会看到如下文件：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6055967-eeb14a175b9300be.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>如果没有可能被隐藏了，这时你需要设置显示隐藏文件，然后打开id_ras.pub文件，复制里面的内容。然后登陆GitHub，进入settings界面（这里是总的设置界面，不是仓库设置界面），然后点击new key,将刚刚复制的内容分粘贴进去，保存就ok了。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6055967-f8f79d595032224c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>配置完成后就该检查是否成功没有了，在刚刚的命令行窗口中输入：<code>ssh -T git@github.com</code>，</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6055967-9eb55d58afe563b8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>若出现上图界面，则显示成功了，第一册可能会有一个叫你输入Yes/No的选项，输入Y就好了，然后可以继续下一步了。</p>
+<p><strong>第三步</strong>：现在你已经通过SSH链接到GitHub了，现在配置一下git的相关信息（如果设置过则可以跳过此步骤），在你的命令行中输入：</p>
+<p><code>$ git config --global user.name &quot;aierui&quot;//用户名</code></p>
+<p><code>$ git config --global user.email &quot;imland@outlook.com&quot;//填写自己的邮箱</code></p>
+<p>到这里就配置完成了，继续下面的步骤了。</p>
+<p><strong>第四部</strong>：配置Deployment</p>
+<p>进入你创的博客文件夹，在_config.yml文件中，找到Deployment，然后按照如下修改：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:yourname/yourname.github.io.git</span><br><span class="line">  branch: master1234</span><br></pre></td></tr></table></figure>
+<p>比如我的仓库的地址是git@github.com:Hackers33/Hackers33.github.io.git，所以配置如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:Hackers33/Hackers33.github.io.git</span><br><span class="line">  branch: master1234</span><br></pre></td></tr></table></figure>
+<h4 id="7-发布一篇文章"><a href="#7-发布一篇文章" class="headerlink" title="7.发布一篇文章"></a>7.发布一篇文章</h4><p>在博客文件夹中右击打开git bash，在命令行中输入：<code>hexo new post &quot;article title&quot;</code>，回车，然后你会在source\ _posts文件夹下看到article title.md 文件，用markdown编辑器就可以编辑的文章了，如果对markdown编辑器不太了解的，可以百度，很简单的。</p>
+<p><strong>注意：</strong>在生成和部署文章之前需要安装一个扩展，在当前命令行中输入：<code>npm install hexo-deployer-git --save</code></p>
+<p>如果没有安装，可能会遇到如下问题：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deloyer not found:git</span><br></pre></td></tr></table></figure>
+<p>然后继续在命令行输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g   // 生成</span><br><span class="line">hexo d   // 部署</span><br></pre></td></tr></table></figure>
+<p>部署成功后访问 你的地址，<a href="https://yourname.github.io/" target="_blank" rel="noopener">https://yourName.github.io</a>（这里输入我的地址： <a href="https://gdutxiao.github.io/" target="_blank" rel="noopener">https://Hacker233.github.io</a>),将可以看到生成的文章。</p>
+<h4 id="8-hexo插件的使用"><a href="#8-hexo插件的使用" class="headerlink" title="8.hexo插件的使用"></a>8.hexo插件的使用</h4><p>如果想添加更多的功能在博客中，可以阅读hexo的官方文档<a href="https://hexo.io/plugins/" target="_blank" rel="noopener">插件</a>的使用，更换博客主题也可以在官方文档中找到，总之，多多阅读官方文档。</p>
+<h4 id="9-域名的绑定"><a href="#9-域名的绑定" class="headerlink" title="9.域名的绑定"></a>9.域名的绑定</h4><p>自己阿里云或者腾讯云购买一个域名，接下来的步骤我就不在这里阐述了，可以在知乎上了解一下：<a href="http://upload-images.jianshu.io/upload_images/6055967-e5370df7f3ae44bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" target="_blank" rel="noopener">GitHub绑定到自己的域名</a></p>
+<p>结束语：到这里基本也就结束了，是不是很简单呢，其中你可能会遇到许多问题，但是我相信你不会逃避的，善于利用谷歌百度才是学习的好方法。</p>
+<p>这里附上我的博客地址：<a href="http://luhongquan.cn">小全技术博</a></p>
+
+      
+      
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+            <div class="shang_tit">
+              <p>纯属好玩</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+            </div>
+              <div class="pay_explain">扫码打赏，你说多少就多少</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝" /></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixin.png" alt="微信" /></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/posts/4f5b69ce/">零基础Hexo+GitHub搭建个人静态博客</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 小全 的个人博客">小全</a></p>
+        <p><span>发布时间:</span>2018年02月13日 - 14时04分</p>
+        <p><span>最后更新:</span>2018年02月13日 - 14时22分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/posts/4f5b69ce/" title="零基础Hexo+GitHub搭建个人静态博客">http://luhongquan.cn/posts/4f5b69ce/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://luhongquan.cn/posts/4f5b69ce/　　作者: 小全" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/posts/1a9f75b9/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue学习之路（一）利用vue-cli构建vue项目</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#零基础Hexo-Github搭建静态个人博客"><span class="toc-number">1.</span> <span class="toc-text">零基础Hexo+Github搭建静态个人博客</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#搭建环境的准备工作"><span class="toc-number">1.0.1.</span> <span class="toc-text">搭建环境的准备工作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-node-js安装"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">1.node.js安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-安装git"><span class="toc-number">1.0.1.2.</span> <span class="toc-text">2.安装git</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-github账户设置"><span class="toc-number">1.0.1.3.</span> <span class="toc-text">3.github账户设置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-安装Hexo"><span class="toc-number">1.0.1.4.</span> <span class="toc-text">4.安装Hexo</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-hexo的一些配置"><span class="toc-number">1.0.1.5.</span> <span class="toc-text">5.hexo的一些配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-接下来就是将hexo与GitHub-pages联系起来了"><span class="toc-number">1.0.1.6.</span> <span class="toc-text">6.接下来就是将hexo与GitHub pages联系起来了</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-发布一篇文章"><span class="toc-number">1.0.1.7.</span> <span class="toc-text">7.发布一篇文章</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-hexo插件的使用"><span class="toc-number">1.0.1.8.</span> <span class="toc-text">8.hexo插件的使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-域名的绑定"><span class="toc-number">1.0.1.9.</span> <span class="toc-text">9.域名的绑定</span></a></li></ol></li></ol></li></ol></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+        <div id="gitments"></div>
+<script src="/js/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+      id: window.location.pathname,
+      owner: 'hacker233',
+      repo: 'hacker233.github.io',
+      oauth: {
+        client_id: 'afefb1269b4c992c7d43',
+        client_secret: 'fbbe0ad954a9b03dd4182e3fb50bfd61cd0aca88',
+      },
+    })
+    gitment.render('gitments')
+</script>
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/posts/1a9f75b9/" title="下一篇: vue学习之路（一）利用vue-cli构建vue项目">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/posts/4f5b69ce/">零基础Hexo+GitHub搭建个人静态博客</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/1a9f75b9/">vue学习之路（一）利用vue-cli构建vue项目</a></li><li class="post-list-item"><a class="post-list-link" href="/posts/533ce9e9/">十分钟GitHub pages搭建个人博客小白教程</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2018 小全
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >游客到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+    <script type="text/javascript">
+      window.onload = function(){
+        document.getElementById("search").onclick = function(){
+            console.log("search")
+            search();
+        }
+      }
+      function search(){
+        (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+        (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+        e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+        })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+        _st('install','A1Pz-LKMXbrzcFg2FWi6','2.0.0');
+      }
+    </script>
+
+  </div>
+</body>
+</html>
