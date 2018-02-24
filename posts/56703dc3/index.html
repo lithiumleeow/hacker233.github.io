@@ -5,13 +5,13 @@
   
   <title>vue学习之路（二）vue-cli目录结构分析 | 小全技术博</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="vue学习之路（二）vue-cli项目结构分析总体结构介绍其中src是项目结构的重要结构文件，本文也会重点介绍此文件夹下的相关文件。  详细介绍">
+  <meta name="description" content="vue学习之路（二）vue-cli项目结构分析前言：我们已经用vue-cli建立起了vue项目框架，但是建立起了要怎么用呢，也许会有许多人一看到一大堆的文件目录就有一些慌张了，可是官方却说这是简化我们的开发过程。官方这么说肯定有他的道理。接下来我们就看看道理哪里变得简单了吧。">
 <meta name="keywords" content="vue">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue学习之路（二）vue-cli目录结构分析">
 <meta property="og:url" content="http://luhongquan.cn/posts/56703dc3/index.html">
 <meta property="og:site_name" content="小全技术博">
-<meta property="og:description" content="vue学习之路（二）vue-cli项目结构分析总体结构介绍其中src是项目结构的重要结构文件，本文也会重点介绍此文件夹下的相关文件。  详细介绍">
+<meta property="og:description" content="vue学习之路（二）vue-cli项目结构分析前言：我们已经用vue-cli建立起了vue项目框架，但是建立起了要怎么用呢，也许会有许多人一看到一大堆的文件目录就有一些慌张了，可是官方却说这是简化我们的开发过程。官方这么说肯定有他的道理。接下来我们就看看道理哪里变得简单了吧。">
 <meta property="og:locale" content="ch">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-f9ce95811f43d5ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-91ac51cc9941ca3a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
@@ -24,10 +24,10 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-73df93b1c7f8088c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-34a7722290065e2c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-895754664b14bac6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-02-24T13:35:36.520Z">
+<meta property="og:updated_time" content="2018-02-24T13:38:06.751Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue学习之路（二）vue-cli目录结构分析">
-<meta name="twitter:description" content="vue学习之路（二）vue-cli项目结构分析总体结构介绍其中src是项目结构的重要结构文件，本文也会重点介绍此文件夹下的相关文件。  详细介绍">
+<meta name="twitter:description" content="vue学习之路（二）vue-cli项目结构分析前言：我们已经用vue-cli建立起了vue项目框架，但是建立起了要怎么用呢，也许会有许多人一看到一大堆的文件目录就有一些慌张了，可是官方却说这是简化我们的开发过程。官方这么说肯定有他的道理。接下来我们就看看道理哪里变得简单了吧。">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/6055967-f9ce95811f43d5ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="小全技术博" type="application/atom+xml">
@@ -280,10 +280,11 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="vue学习之路（二）vue-cli项目结构分析"><a href="#vue学习之路（二）vue-cli项目结构分析" class="headerlink" title="vue学习之路（二）vue-cli项目结构分析"></a>vue学习之路（二）vue-cli项目结构分析</h1><h5 id="总体结构介绍"><a href="#总体结构介绍" class="headerlink" title="总体结构介绍"></a>总体结构介绍</h5><p>其中src是项目结构的重要结构文件，本文也会重点介绍此文件夹下的相关文件。</p>
+        <h1 id="vue学习之路（二）vue-cli项目结构分析"><a href="#vue学习之路（二）vue-cli项目结构分析" class="headerlink" title="vue学习之路（二）vue-cli项目结构分析"></a>vue学习之路（二）vue-cli项目结构分析</h1><p>前言：我们已经用vue-cli建立起了vue项目框架，但是建立起了要怎么用呢，也许会有许多人一看到一大堆的文件目录就有一些慌张了，可是官方却说这是简化我们的开发过程。官方这么说肯定有他的道理。接下来我们就看看道理哪里变得简单了吧。</p>
+<a id="more"></a>
+<h5 id="总体结构介绍"><a href="#总体结构介绍" class="headerlink" title="总体结构介绍"></a>总体结构介绍</h5><p>其中src是项目结构的重要结构文件，本文也会重点介绍此文件夹下的相关文件。</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/6055967-f9ce95811f43d5ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<h5 id="详细介绍"><a href="#详细介绍" class="headerlink" title="详细介绍"></a>详细介绍</h5><a id="more"></a>
-<p><strong>1.build文件夹（webpack配置）</strong></p>
+<h5 id="详细介绍"><a href="#详细介绍" class="headerlink" title="详细介绍"></a>详细介绍</h5><p><strong>1.build文件夹（webpack配置）</strong></p>
 <p><code>build</code>文件夹里面最主要的是<code>webpack</code>的相关配置文件，在新一代的<code>vue-cli</code>中，没有<code>dev-server.js</code>文件，因为它被与集成到开发环境配置文件里面了，当我们输入<code>npm run dev</code>启动项目的时候，最先就会启动<code>dev-server</code>，它会检查<code>npm</code>以及<code>node</code>的版本，加载配置文件，启动服务。</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/6055967-91ac51cc9941ca3a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <h5 id="2-config文件夹（vue项目配置）"><a href="#2-config文件夹（vue项目配置）" class="headerlink" title="2.config文件夹（vue项目配置）"></a><strong>2.config文件夹（vue项目配置）</strong></h5><p><code>config</code>文件夹里面的文件主要是项目相关配置，我们常用的就是当端口冲突时配置监听端口，打包输出路径及命名等</p>
@@ -379,7 +380,7 @@
         <p><span>本文标题:</span><a href="/posts/56703dc3/">vue学习之路（二）vue-cli目录结构分析</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 小全 的个人博客">小全</a></p>
         <p><span>发布时间:</span>2018年02月24日 - 21时26分</p>
-        <p><span>最后更新:</span>2018年02月24日 - 21时35分</p>
+        <p><span>最后更新:</span>2018年02月24日 - 21时38分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/posts/56703dc3/" title="vue学习之路（二）vue-cli目录结构分析">http://luhongquan.cn/posts/56703dc3/</a>
             <span class="copy-path" data-clipboard-text="原文: http://luhongquan.cn/posts/56703dc3/　　作者: 小全" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
