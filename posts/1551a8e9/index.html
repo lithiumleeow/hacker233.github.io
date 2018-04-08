@@ -3,32 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>vue学习之路（二）vue-cli目录结构分析 | 小全技术博</title>
+  <title>CSS实现垂直水平居中总结 | 小全技术博</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言：我们已经用vue-cli建立起了vue项目框架，但是建立起了要怎么用呢，也许会有许多人一看到一大堆的文件目录就有一些慌张了，可是官方却说这是简化我们的开发过程。官方这么说肯定有他的道理。接下来我们就看看道理哪里变得简单了吧。">
-<meta name="keywords" content="vue">
+  <meta name="description" content="个人对CSS实现垂直水平居中的总结">
+<meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue学习之路（二）vue-cli目录结构分析">
-<meta property="og:url" content="http://luhongquan.cn/posts/56703dc3/index.html">
+<meta property="og:title" content="CSS实现垂直水平居中总结">
+<meta property="og:url" content="http://luhongquan.cn/posts/1551a8e9/index.html">
 <meta property="og:site_name" content="小全技术博">
-<meta property="og:description" content="前言：我们已经用vue-cli建立起了vue项目框架，但是建立起了要怎么用呢，也许会有许多人一看到一大堆的文件目录就有一些慌张了，可是官方却说这是简化我们的开发过程。官方这么说肯定有他的道理。接下来我们就看看道理哪里变得简单了吧。">
+<meta property="og:description" content="个人对CSS实现垂直水平居中的总结">
 <meta property="og:locale" content="ch">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-f9ce95811f43d5ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-91ac51cc9941ca3a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-eb89796f5adadc32.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-99f1aae98960f9bb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-cd64e2b1a33d739d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-2b79b4cb0fd231a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-39f37d4b72b66a1b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-cb9350c1b9c137c8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-73df93b1c7f8088c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-34a7722290065e2c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-895754664b14bac6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-02-24T13:40:25.673Z">
+<meta property="og:updated_time" content="2018-04-08T08:01:20.781Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue学习之路（二）vue-cli目录结构分析">
-<meta name="twitter:description" content="前言：我们已经用vue-cli建立起了vue项目框架，但是建立起了要怎么用呢，也许会有许多人一看到一大堆的文件目录就有一些慌张了，可是官方却说这是简化我们的开发过程。官方这么说肯定有他的道理。接下来我们就看看道理哪里变得简单了吧。">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/6055967-f9ce95811f43d5ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="CSS实现垂直水平居中总结">
+<meta name="twitter:description" content="个人对CSS实现垂直水平居中的总结">
   
     <link rel="alternative" href="/atom.xml" title="小全技术博" type="application/atom+xml">
   
@@ -242,11 +230,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-vue学习之路（二）vue-cli目录结构分析" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-CSS实现垂直水平居中总结" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/posts/56703dc3/" class="article-date">
-      <time datetime="2018-02-24T13:26:09.000Z" itemprop="datePublished">2018-02-24</time>
+      <a href="/posts/1551a8e9/" class="article-date">
+      <time datetime="2018-04-08T07:56:54.000Z" itemprop="datePublished">2018-04-08</time>
 </a>
     </div>
   
@@ -259,7 +247,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      vue学习之路（二）vue-cli目录结构分析
+      CSS实现垂直水平居中总结
     </h1>
   
 
@@ -270,7 +258,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -280,48 +268,57 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>前言：我们已经用vue-cli建立起了vue项目框架，但是建立起了要怎么用呢，也许会有许多人一看到一大堆的文件目录就有一些慌张了，可是官方却说这是简化我们的开发过程。官方这么说肯定有他的道理。接下来我们就看看道理哪里变得简单了吧。</p>
-<a id="more"></a>
-<h5 id="总体结构介绍"><a href="#总体结构介绍" class="headerlink" title="总体结构介绍"></a>总体结构介绍</h5><p>其中src是项目结构的重要结构文件，本文也会重点介绍此文件夹下的相关文件。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6055967-f9ce95811f43d5ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<h5 id="详细介绍"><a href="#详细介绍" class="headerlink" title="详细介绍"></a>详细介绍</h5><p><strong>1.build文件夹（webpack配置）</strong></p>
-<p><code>build</code>文件夹里面最主要的是<code>webpack</code>的相关配置文件，在新一代的<code>vue-cli</code>中，没有<code>dev-server.js</code>文件，因为它被与集成到开发环境配置文件里面了，当我们输入<code>npm run dev</code>启动项目的时候，最先就会启动<code>dev-server</code>，它会检查<code>npm</code>以及<code>node</code>的版本，加载配置文件，启动服务。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6055967-91ac51cc9941ca3a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<h5 id="2-config文件夹（vue项目配置）"><a href="#2-config文件夹（vue项目配置）" class="headerlink" title="2.config文件夹（vue项目配置）"></a><strong>2.config文件夹（vue项目配置）</strong></h5><p><code>config</code>文件夹里面的文件主要是项目相关配置，我们常用的就是当端口冲突时配置监听端口，打包输出路径及命名等</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6055967-eb89796f5adadc32.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p><strong>3.node_mudules文件夹（依赖包）</strong></p>
-<p><code>node_mudules</code>是项目依赖包，里面包括了很多项目依赖。安装方法，在在项目文件夹中打开命令行，输入<code>npm install</code>即可安装该依赖包。</p>
-<p>一般什么情况下我们需要安装依赖包呢：</p>
-<p>（一）当我们运行项目时提示缺少依赖包，比如外部加载css时需要css-loader，这个就需要我们额外安装。</p>
-<p>（二）当需要安装插件的时候，比如Vuex。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6055967-99f1aae98960f9bb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p><strong>4.src文件夹（项目核心文件）</strong></p>
-<p>我们进行开发时，主要时在src文件夹目录下完成，这里对该文件夹内的几个重要文件详细介绍：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6055967-cd64e2b1a33d739d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p><strong>（1）App.vue（根组件）</strong></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6055967-2b79b4cb0fd231a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p><code>App.vue</code>是项目的根组件，一个vue页面一把又三个部分组成：【template】，【script】，【style】。</p>
-<p>【template】：模板</p>
-<p>使用<code>vue-cli</code>构建vue项目的好处就是方便，不用再去声明什么创建模板之类的语句，可以直接写模板内容了，要注意的是，模板中所有的内容只有一个根节点，就像上图，所有内容都包含在<code>div</code>标签内。</p>
-<p>【script】：JavaScript代码</p>
-<p>该部分用于编写JavaScript代码片段，用export default导出。</p>
-<p>【style】：css样式代码</p>
-<p>该部分主要用于编写css代码</p>
-<p><strong>（2）main.js（入口文件）</strong></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6055967-39f37d4b72b66a1b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>main.js主要是引入vue框架，根组件及路由设置，并且定义vue实例，components里面就是引用的App组件，如果后期安装了插件或者组件库，例如安装了Element组件库，则需要在main.js文件中引用。</p>
-<p><strong>（3）router（路由配置）</strong></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6055967-cb9350c1b9c137c8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>该文件夹下的index.js则是路由配置文件，“/”则定义的是根路由，当我们进入网页时，展现在我们眼前的就是“/”界面。</p>
-<p><strong>（4）components（组件）</strong></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6055967-73df93b1c7f8088c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>该文件夹下用于存放你自己编写的组件，当需要用时，则只需要在界面引用就可以。</p>
-<p><strong>（5）assets（资源文件）</strong></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6055967-34a7722290065e2c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>一般用于存放需要用到的资源文件，图片居多。</p>
-<p><strong>5.最后说一下index.html文件</strong></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6055967-895754664b14bac6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>该文件为主页面文件，main.js里面定义的实例都挂载到根节点下，内容通过vue组件来填充。</p>
+        <p>个人对CSS实现垂直水平居中的总结<br><a id="more"></a></p>
+<h3 id="一-水平居中"><a href="#一-水平居中" class="headerlink" title="一.水平居中"></a>一.水平居中</h3><p>关于水平居中这里总结了6种方法，每个人习惯的方法不一样，这里看个人甄别：</p>
+<p>（1）如果需要居中的元素是行内元素，则可以将其父元素设置为：text-align:center,这样就很简单的实现了水平居中。</p>
+<p>（2）如果需要居中的元素是块级元素，则可以设置该元素的样式为：margin：0  auto（以为上下外边距为0，左右自适应），这样也可以达到水平居中的效果。</p>
+<p>（3）使用flex布局可以轻松实现水平居中，只需要将子元素设置为如下即可：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.son&#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>（4）还可以利用CSS3中新增的transform属性，其中子元素设计如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.son&#123;</span><br><span class="line">      position:absolute;//设置为绝对定位</span><br><span class="line">      left:50%;</span><br><span class="line">      transform:translate(-50%,0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>（5）使用绝对定位的方式，子元素的设置如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.son&#123;</span><br><span class="line">        position:absolute;//设置为绝对定位</span><br><span class="line">        width:400px;</span><br><span class="line">        left:50%;</span><br><span class="line">        margin-left:-0.5宽度;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>（6）同样是使用绝对定位的方式，只不过子元素的设置方式不同，具体设置如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.son&#123;</span><br><span class="line">        position:absolute;</span><br><span class="line">        width:400px;</span><br><span class="line">        left:0;</span><br><span class="line">        right:0;</span><br><span class="line">        margin:0 auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="二-垂直居中"><a href="#二-垂直居中" class="headerlink" title="二.垂直居中"></a>二.垂直居中</h3><p>这么久以来，CSS垂直居中实现起来一直都有些困难，但垂直居中又是经常在项目中用到的，这里我总结了7种方法供大家参考：</p>
+<p>（1）如果需要垂直居中的元素是单行文本，如P标签等，则只需要将该元素的<code>line-height</code>设置为其父元素的高度。</p>
+<p>（2）如果该元素是块级元素，而且知道父元素和子元素的大小，则可以利用<code>displayl:table</code>来设置为垂直居中：</p>
+<p>父元素样式设置为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.parent &#123;</span><br><span class="line">            height: 100px;</span><br><span class="line">            width: 400px;</span><br><span class="line">            display: table;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>子元素样式设置为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.son&#123;</span><br><span class="line">        display: table-cell;</span><br><span class="line">        vertical-align: middle;</span><br><span class="line">        height: 50px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>（3）这一种方法同样父元素和子元素的大小是知道的，用<code>margin</code>填充的方式来实现垂直居中：</p>
+<p>父元素样式设置为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.parent &#123;</span><br><span class="line">         height: 100px;</span><br><span class="line">         width: 400px;</span><br><span class="line">         overflow: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>子元素样式设置为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.son &#123;</span><br><span class="line">        margin-left: auto;</span><br><span class="line">        margin-right: auto;</span><br><span class="line">        margin-top: calc((100px - 50px)/2);</span><br><span class="line">        height: 50px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>（4）绝对定位实现垂直居中，这种方法可以不用知道父元素和子元素的大小：</p>
+<p>父元素样式设置为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.parent &#123;</span><br><span class="line">   		  position: relative;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>子元素样式设置为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.son &#123;</span><br><span class="line">        position: absolute;</span><br><span class="line">        left: 50%;</span><br><span class="line">        top: 50%;</span><br><span class="line">        margin-top: -25px;</span><br><span class="line">        margin-left: -100px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>（5）利用CSS3下的absolute实现垂直居中，同样，这种方法下的内外容器大小可以不定：</p>
+<p>父元素样式设置为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.parent &#123;</span><br><span class="line">            position: relative;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>子元素样式设置为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.son &#123;</span><br><span class="line">        position: absolute;</span><br><span class="line">        left: 50%;</span><br><span class="line">        top: 50%;</span><br><span class="line">        transform: translateX(-50%) translateY(-50%);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>（6）利用margin：auto；实现垂直居中：</p>
+<p>父元素样式设置为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.parent &#123;</span><br><span class="line">            width: 400px;</span><br><span class="line">            height: 100px;</span><br><span class="line">            position: relative;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>子元素样式设置为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.son &#123;</span><br><span class="line">        position: absolute;</span><br><span class="line">        top: 0;</span><br><span class="line">        bottom: 0;</span><br><span class="line">        left: 0;</span><br><span class="line">        right: 0;</span><br><span class="line">        margin: auto;</span><br><span class="line">        height: 50px;</span><br><span class="line">        width: 70%;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>（7）利用flex布局实现垂直居中：</p>
+<p>父元素设置为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.parent &#123;</span><br><span class="line">            width: 400px;</span><br><span class="line">            height: 100px;</span><br><span class="line">            display: flex;</span><br><span class="line">            justify-content: center;</span><br><span class="line">            align-items: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>子元素设置为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.son &#123;</span><br><span class="line">        height: 50px;</span><br><span class="line">        width: 70%;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="三-总结"><a href="#三-总结" class="headerlink" title="三.总结"></a>三.总结</h3><p>实现水平垂直居中是一个难点，也经常在面试中遇到，今天将自己了解到的垂直水平的方法总结了一下，实现居中的步骤我大致总结为如下：</p>
+<ol>
+<li>判断实现水平居中还是垂直居中。</li>
+<li>若是水平居中，判断居中元素是行内还是块级元素。</li>
+<li>若是垂直居中，判断该元素是行内还是块级元素。</li>
+<li>若是块级元素，判断该元素的内外容器大小是否知道。</li>
+</ol>
 
       
       
@@ -377,13 +374,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/posts/56703dc3/">vue学习之路（二）vue-cli目录结构分析</a></p>
+        <p><span>本文标题:</span><a href="/posts/1551a8e9/">CSS实现垂直水平居中总结</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 小全 的个人博客">小全</a></p>
-        <p><span>发布时间:</span>2018年02月24日 - 21时26分</p>
-        <p><span>最后更新:</span>2018年02月24日 - 21时40分</p>
+        <p><span>发布时间:</span>2018年04月08日 - 15时56分</p>
+        <p><span>最后更新:</span>2018年04月08日 - 16时01分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/posts/56703dc3/" title="vue学习之路（二）vue-cli目录结构分析">http://luhongquan.cn/posts/56703dc3/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://luhongquan.cn/posts/56703dc3/　　作者: 小全" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/posts/1551a8e9/" title="CSS实现垂直水平居中总结">http://luhongquan.cn/posts/1551a8e9/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://luhongquan.cn/posts/1551a8e9/　　作者: 小全" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -396,18 +393,9 @@
 
 <nav id="article-nav">
   
-    <a href="/posts/1551a8e9/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          CSS实现垂直水平居中总结
-        
-      </div>
-    </a>
   
-  
-    <a href="/posts/4f5b69ce/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">零基础Hexo+GitHub搭建个人静态博客</div>
+    <a href="/posts/56703dc3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue学习之路（二）vue-cli目录结构分析</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -418,7 +406,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#总体结构介绍"><span class="toc-number">1.</span> <span class="toc-text">总体结构介绍</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#详细介绍"><span class="toc-number">2.</span> <span class="toc-text">详细介绍</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-config文件夹（vue项目配置）"><span class="toc-number">3.</span> <span class="toc-text">2.config文件夹（vue项目配置）</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一-水平居中"><span class="toc-number">1.</span> <span class="toc-text">一.水平居中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二-垂直居中"><span class="toc-number">2.</span> <span class="toc-text">二.垂直居中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三-总结"><span class="toc-number">3.</span> <span class="toc-text">三.总结</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -484,13 +472,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/posts/1551a8e9/" title="上一篇: CSS实现垂直水平居中总结">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/posts/4f5b69ce/" title="下一篇: 零基础Hexo+GitHub搭建个人静态博客">
+            <a href="/posts/56703dc3/" title="下一篇: vue学习之路（二）vue-cli目录结构分析">
                 <i class="fa fa-angle-right"></i>
             </a>
         
