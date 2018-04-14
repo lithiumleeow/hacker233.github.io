@@ -3,37 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>vue学习之路（一）利用vue-cli构建vue项目 | 小全技术博</title>
+  <title>JavaScript之数组扁平化处理 | 小全技术博</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="利用vue-cli来开发vue项目第一步">
-<meta name="keywords" content="vue">
+  <meta name="description" content="关于JavaScript函数实现数组扁平化的总结">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue学习之路（一）利用vue-cli构建vue项目">
-<meta property="og:url" content="http://luhongquan.cn/posts/1a9f75b9/index.html">
+<meta property="og:title" content="JavaScript之数组扁平化处理">
+<meta property="og:url" content="http://luhongquan.cn/posts/1343772e/index.html">
 <meta property="og:site_name" content="小全技术博">
-<meta property="og:description" content="利用vue-cli来开发vue项目第一步">
+<meta property="og:description" content="关于JavaScript函数实现数组扁平化的总结">
 <meta property="og:locale" content="ch">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-e1fa3df0e7e7e5f4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-e5e95a284d93b8ee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-6d4f2346d9b986f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-1cfee1f76fb4dd9d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-ab068076ca741cc3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-c5702150ccc86b88.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-f6e4697d1e6b4bfb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-a102ee14c3afe971.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-3508787556f930e1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-7bd176f2df72a607.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-344ca43cb51ca888.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-3f4fefe9e406c8c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-84c5b58425f30285.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-6a986277579a4267.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-12f010f0ee66211b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6055967-417214db88f87645.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-02-12T08:19:01.842Z">
+<meta property="og:updated_time" content="2018-04-14T05:55:38.657Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue学习之路（一）利用vue-cli构建vue项目">
-<meta name="twitter:description" content="利用vue-cli来开发vue项目第一步">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/6055967-e1fa3df0e7e7e5f4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="JavaScript之数组扁平化处理">
+<meta name="twitter:description" content="关于JavaScript函数实现数组扁平化的总结">
   
     <link rel="alternative" href="/atom.xml" title="小全技术博" type="application/atom+xml">
   
@@ -247,11 +230,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-vue学习之路（一）" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-JavaScript之数组扁平化处理" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/posts/1a9f75b9/" class="article-date">
-      <time datetime="2018-02-11T06:38:43.086Z" itemprop="datePublished">2018-02-11</time>
+      <a href="/posts/1343772e/" class="article-date">
+      <time datetime="2018-04-14T05:50:37.000Z" itemprop="datePublished">2018-04-14</time>
 </a>
     </div>
   
@@ -264,7 +247,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      vue学习之路（一）利用vue-cli构建vue项目
+      JavaScript之数组扁平化处理
     </h1>
   
 
@@ -275,7 +258,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -285,14 +268,20 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>利用vue-cli来开发vue项目第一步<br><a id="more"></a><br><strong>vue是什么</strong>：（官方解释）Vue (读音 /vjuː/，类似于 <strong>view</strong>) 是一套用于构建用户界面的<strong>渐进式框架</strong>。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与<a href="https://cn.vuejs.org/v2/guide/single-file-components.html" target="_blank" rel="noopener">现代化的工具链</a>以及各种<a href="https://github.com/vuejs/awesome-vue#libraries--plugins" target="_blank" rel="noopener">支持类库</a>结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。</p>
-<p>其实就是一个前端框架。</p>
-<p><strong>vue-cli是什么</strong>：<code>vue-cli</code>是<a href="https://vuejs.org/" target="_blank" rel="noopener">Vue</a>的脚手架工具,打个比方，就好比就要修建房子，首先要做的就是将房子的整体结构先修好，然后在往里面填东西。<code>vue-cli</code>就提供了这样一个功能，将<a href="http://webpack.github.io/" target="_blank" rel="noopener">webpack</a>等打包程序集为一体，让我们开发vue项目更加方便快捷。</p>
-<p><em>本教程以window版本安装为例，其他系统大同小异</em>。</p>
-<p><strong>一</strong>.<br>要使用<code>vue-cli</code>，首先得安装<code>node.js</code>,我相信学习前端的小伙伴多半电脑上都安装了<code>node.js</code>，这里我们也只使用<code>node.js</code>的<code>npm</code>包管理功能。若没有安装，则到<a href="https://nodejs.org/en/" target="_blank" rel="noopener">node.js官网</a>下载安装即可，安装步骤和安装QQ没什么区别。检查安装成功与否：<code>win+R</code>键输入<code>cmd</code>弹出命令行窗口，在命令行窗口输入<code>node -v</code>，若显示node的版本号则安装成功。因为现在npm管理工具已经和<code>node.js</code>集成了，所用不用再单独下载了。<br><img src="http://upload-images.jianshu.io/upload_images/6055967-e1fa3df0e7e7e5f4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p><strong>二</strong>.<br>接下来就是使用<code>vue-cli</code>了。<br>要使用<code>Vue-cli</code>，首先就得安装<code>vue-cli</code>。就在刚刚的那个命令行窗口输入<code>npm install -g vue-cli</code>，<code>-g</code>的意思是全局安装。由于网络限制原因，安装过程可能有些缓慢，在意的同学可百度<a href="http://npm.taobao.org/" target="_blank" rel="noopener">npm淘宝镜像</a>不在意的同学不用管。<br>安装结果：<br><img src="http://upload-images.jianshu.io/upload_images/6055967-e5e95a284d93b8ee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>图片和大家可能不一样，因为我之前安装过<code>vue-cli</code><br>安装成功之后，可以执行<code>vue list</code> 命令查看：<br><img src="http://upload-images.jianshu.io/upload_images/6055967-6d4f2346d9b986f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>也是可以使用<code>vue  -V</code>查看，注意是大写的<code>V</code><br><img src="http://upload-images.jianshu.io/upload_images/6055967-1cfee1f76fb4dd9d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>若如图显示，则恭喜安装成功。</p>
-<p><strong>三</strong>.<br>接下来在电脑的任意位置建立一个文件夹，这里我取名为<code>test</code>。打开<code>test</code>文件夹：<br><img src="http://upload-images.jianshu.io/upload_images/6055967-ab068076ca741cc3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>然后在当前文件夹任意位置按住<code>shift</code>键然后鼠标右击，会出现在此处打开命令行工具的选项：<br><img src="http://upload-images.jianshu.io/upload_images/6055967-c5702150ccc86b88.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>点击打开命令行工具，输入<code>vue init webpack</code>对该项目以<code>webpack</code>的打包模板进行初始化。网络原因，这个过程可能要等一会儿。<br><img src="http://upload-images.jianshu.io/upload_images/6055967-f6e4697d1e6b4bfb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>输入Y，继续执行<br><img src="http://upload-images.jianshu.io/upload_images/6055967-a102ee14c3afe971.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>项目名称，项目介绍，以及作者等都可以默认，<code>vue-router</code>是官方提供的路由插件，在这里我选择Y。<br><img src="http://upload-images.jianshu.io/upload_images/6055967-3508787556f930e1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>接下来的几项我都选择<code>N</code>，这里大概是指是否安装规范代码格式检查，由于是测试，这里就不安装了。然后就静静的等待它安装完成：<br><img src="http://upload-images.jianshu.io/upload_images/6055967-7bd176f2df72a607.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>安装完成<br><img src="http://upload-images.jianshu.io/upload_images/6055967-344ca43cb51ca888.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>你也可以输入<code>webpack -v</code>检查安装正确与否<br><img src="http://upload-images.jianshu.io/upload_images/6055967-3f4fefe9e406c8c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>这是在看目录文件夹，项目结构已经出来了<br><img src="http://upload-images.jianshu.io/upload_images/6055967-84c5b58425f30285.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>接下来执行<code>npm install</code>命令，这一步也可以省略，不过为了后面项目的开发，建议安装。<br><img src="http://upload-images.jianshu.io/upload_images/6055967-6a986277579a4267.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>接下来就是见证奇迹的时刻到了，输入命令<code>npm run dev</code>，在本地查看项目。<br><img src="http://upload-images.jianshu.io/upload_images/6055967-12f010f0ee66211b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>然后就在浏览器中输入<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a>，若显示如图所示，则代表你已经安装成功了。<br><img src="http://upload-images.jianshu.io/upload_images/6055967-417214db88f87645.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>到这里基本就结束了，后面我会继续更新vue学习之路（二）</p>
+        <p>关于JavaScript函数实现数组扁平化的总结<br><a id="more"></a></p>
+<h3 id="一-什么是扁平化？"><a href="#一-什么是扁平化？" class="headerlink" title="一.什么是扁平化？"></a>一.什么是扁平化？</h3><p>所谓的数组扁平化，就是将一个嵌套多层的数组转化为只有一层的数组。</p>
+<p>比如说：数组<code>array[1,2,[3,4,5,[6,7,8,9]]]</code>，</p>
+<p>将这个数组扁平化后的结果为：<code>array[1,2,3,4,5,6,7,8,9]</code></p>
+<p>下面我们就要设计一个函数<code>flatten(arr)</code>来将数组进行扁平化处理。</p>
+<h3 id="二-采用递归的方式"><a href="#二-采用递归的方式" class="headerlink" title="二.采用递归的方式"></a>二.采用递归的方式</h3><p>从一般的角度来说，最容易想到的就是循环数组，如果循环到里面还是一个数组，就递归调用该方法，具体的代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1, [2, [3, 4]]];</span><br><span class="line"></span><br><span class="line">function flatten(arr) &#123;</span><br><span class="line">    var result = []; //定义一个新的空数组</span><br><span class="line">    for (var i = 0; i &lt; arr.length; i++) &#123; //循环该数组</span><br><span class="line">        if (Array.isArray(arr[i])) &#123; //判断是否为数组，返回bool值</span><br><span class="line">            result = result.concat(flatten(arr[i])); //如果是数组，则递归回调该函数</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            result.push(arr[i]); //若不为数组，则直接将值push到result里</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">&#125;</span><br><span class="line">console.log(flatten(arr));</span><br></pre></td></tr></table></figure>
+<h3 id="三-采用toString-方式"><a href="#三-采用toString-方式" class="headerlink" title="三.采用toString()方式"></a>三.采用toString()方式</h3><p>如果数组元素都是数字的话，则我们可以使用toString方法，因为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[1, [2, [3, 4]]].toString() // &quot;1,2,3,4&quot;</span><br></pre></td></tr></table></figure>
+<p>具体的完整函数代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1, [2, [3, 4]]];</span><br><span class="line"></span><br><span class="line">function flatten(arr) &#123;</span><br><span class="line">    return arr.toString(), split(&apos;,&apos;).map(function(item) &#123; //首先将数组转换为单个字符的字符串，然后并将字符串以“，”分割为字符串数组，然后利用map函数返回一个新的数组，具体的map()的使用参考官方文档</span><br><span class="line">        return +item;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line">console.log(flatten(arr));</span><br></pre></td></tr></table></figure>
+<p>这种方法非常具有局限性，如果数组中的元素不是数字，则会出现错误。</p>
+<h3 id="四-采用reduce方法"><a href="#四-采用reduce方法" class="headerlink" title="四.采用reduce方法"></a>四.采用reduce方法</h3><p><code>reduce()</code> 方法接收一个函数作为累加器，数组中的每个值（从左到右）开始缩减，最终计算为一个值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1, [2, [3, 4]]];</span><br><span class="line"></span><br><span class="line">function flatten(arr) &#123;</span><br><span class="line">    return arr.reduce(function(prev, next)&#123;</span><br><span class="line">        return prev.concat(Array.isArray(next) ? flatten(next) : next)//reduce()接受一个函数function（prev，next），next表示当前数组元素，prev表示最终返回的一个结果值</span><br><span class="line">    &#125;, [])</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(flatten(arr))</span><br></pre></td></tr></table></figure>
 
       
       
@@ -348,13 +337,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/posts/1a9f75b9/">vue学习之路（一）利用vue-cli构建vue项目</a></p>
+        <p><span>本文标题:</span><a href="/posts/1343772e/">JavaScript之数组扁平化处理</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 小全 的个人博客">小全</a></p>
-        <p><span>发布时间:</span>2018年02月11日 - 14时38分</p>
-        <p><span>最后更新:</span>2018年02月12日 - 16时19分</p>
+        <p><span>发布时间:</span>2018年04月14日 - 13时50分</p>
+        <p><span>最后更新:</span>2018年04月14日 - 13时55分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/posts/1a9f75b9/" title="vue学习之路（一）利用vue-cli构建vue项目">http://luhongquan.cn/posts/1a9f75b9/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://luhongquan.cn/posts/1a9f75b9/　　作者: 小全" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/posts/1343772e/" title="JavaScript之数组扁平化处理">http://luhongquan.cn/posts/1343772e/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://luhongquan.cn/posts/1343772e/　　作者: 小全" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -367,18 +356,9 @@
 
 <nav id="article-nav">
   
-    <a href="/posts/4f5b69ce/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          零基础Hexo+GitHub搭建个人静态博客
-        
-      </div>
-    </a>
   
-  
-    <a href="/posts/533ce9e9/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">十分钟GitHub pages搭建个人博客小白教程</div>
+    <a href="/posts/1551a8e9/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS实现垂直水平居中总结</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -389,7 +369,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一-什么是扁平化？"><span class="toc-number">1.</span> <span class="toc-text">一.什么是扁平化？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二-采用递归的方式"><span class="toc-number">2.</span> <span class="toc-text">二.采用递归的方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三-采用toString-方式"><span class="toc-number">3.</span> <span class="toc-text">三.采用toString()方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四-采用reduce方法"><span class="toc-number">4.</span> <span class="toc-text">四.采用reduce方法</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -455,13 +435,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/posts/4f5b69ce/" title="上一篇: 零基础Hexo+GitHub搭建个人静态博客">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/posts/533ce9e9/" title="下一篇: 十分钟GitHub pages搭建个人博客小白教程">
+            <a href="/posts/1551a8e9/" title="下一篇: CSS实现垂直水平居中总结">
                 <i class="fa fa-angle-right"></i>
             </a>
         
